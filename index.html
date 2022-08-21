@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificador</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="img-container">
+        <img class="logo-img" src="./assets/Vector.svg" alt="" />
+      </div>
+      <textarea
+        name="text-input"
+        id="text-input"
+        placeholder="Digite seu texto"
+        cols="30"
+        rows="10"
+        class="text-field input-text"
+      ></textarea>
+      <div class="info-container">
+        <img src="./assets/alert-icon.svg" alt="" />
+        <p>Apenas letras minúsculas e sem acento.</p>
+      </div>
+      <div class="buttons-container">
+        <button id="encrypt" class="encrypt">Criptografar</button>
+        <button id="decrypt" class="decrypt">Descriptografar</button>
+      </div>
+      <div id="output-text" class="output-text">
+        <div id="toggle">
+          <h4 class="text-output">Nenhuma mensagem encontrada</h4>
+          <p>
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
