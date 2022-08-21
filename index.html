@@ -10,26 +10,29 @@
   <body>
     <main>
       <div class="img-container">
-        <img class="logo-img" src="./assets/Vector.svg" alt="" />
-      </div>
-      <textarea
-        name="text-input"
-        id="text-input"
-        placeholder="Digite seu texto"
-        cols="30"
-        rows="10"
-        class="text-field input-text"
-      ></textarea>
-      <div class="info-container">
-        <img src="./assets/alert-icon.svg" alt="" />
-        <p>Apenas letras minúsculas e sem acento.</p>
-      </div>
-      <div class="buttons-container">
-        <button id="encrypt" class="encrypt">Criptografar</button>
-        <button id="decrypt" class="decrypt">Descriptografar</button>
+          <img class="logo-img" src="./assets/Vector.svg" alt="" />
+        <div class="main-container">
+          <textarea
+            name="text-input"
+            id="text-input"
+            placeholder="Digite seu texto"
+            cols="30"
+            rows="10"
+            class="text-field input-text"
+          ></textarea>
+          <div class="info-container">
+            <img src="./assets/alert-icon.svg" alt="" />
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </div>
+          <div class="buttons-container">
+            <button id="encrypt" class="encrypt">Criptografar</button>
+            <button id="decrypt" class="decrypt">Descriptografar</button>
+          </div>
+        </div>
       </div>
       <div id="output-text" class="output-text">
         <div id="toggle">
+          <img class="searching-img" src="./assets/girl-vector.svg" alt="" />
           <h4 class="text-output">Nenhuma mensagem encontrada</h4>
           <p>
             Digite um texto que você deseja criptografar ou descriptografar.

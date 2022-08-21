@@ -70,6 +70,10 @@ body {
   color: #495057;
 }
 
+.searching-img {
+  display: none;
+}
+
 button {
   width: 330px;
   height: 60px;
@@ -94,4 +98,52 @@ button {
 
 .hide {
   display: none;
+}
+
+@media (min-width: 765px) {
+  body {
+    margin: 40px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
+  .main-container{
+    margin: 0 40px 0 100px;
+  }
+
+  .input-text {
+    height: 900px;
+  }
+
+  .buttons-container{
+    justify-content: space-between;
+  }
+
+  .decrypt{
+    background-color: #D8DFE8;
+  }
+
+  .output-text {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .searching-img {
+    display: unset;
+  }
 }
