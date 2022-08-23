@@ -1,55 +1,67 @@
-var textOutput = document.getElementById("output-text");
+const textInput = document.querySelector(".input-text");
+const textOutput = document.querySelector(".output-text");
 
-var encryptButton = document.getElementById("encrypt");
-encryptButton.addEventListener("click", encryptText);
-
-var decryptButton = document.getElementById("decrypt");
-decryptButton.addEventListener("click", decryptText);
-
-var newMessage;
-
-function encryptText() {
-  var textInput = Array.from(document.getElementById("text-input").value);
-  for (var i = 0; i < textInput.length; i++) {
-    if (textInput[i] === "e") {
-      textInput[i] = "enter";
-    }
-    if (textInput[i] === "i") {
-      textInput[i] = "imes";
-    }
-    if (textInput[i] === "a") {
-      textInput[i] = "ai";
-    }
-    if (textInput[i] === "o") {
-      textInput[i] = "ober";
-    }
-    if (textInput[i] === "u") {
-      textInput[i] = "ufat";
-    }
-  }
-  textOutput.innerHTML = textInput.join("");
-  textInput.innerHTML = "";
-  var hidePlaceholders = document.getElementById("toggle");
-  if (hidePlaceholders.classList.contains("hide")) {
-    return;
-  } else {
-    hidePlaceholders.classList.add("hide");
-  }
+function hidePlaceholders() {
+  const placeholders = document.querySelector(".toggle");
+  placeholders.style.display = "none";
 }
 
-function decryptText() {
-  var textInput = document.getElementById("text-input").value;
+function showOutput() {
+  textOutput.style.display = "none";
+}
 
-  var newString = textInput.replaceAll("enter", "e");
-  var newString = newString.replaceAll("imes", "i");
-  var newString = newString.replaceAll("ai", "a");
-  var newString = newString.replaceAll("ober", "o");
-  var newString = newString.replaceAll("ufat", "u");
+function btnEncrypt() {
+  var textToBeEncrypted = encrypt(textInput.value);
+  textOutput.innerHTML = textToBeEncrypted;
+}
 
-//   var newString1 = textInput.replaceAll("enter", "e");
-//   var newString2 = newString1.replaceAll("imes", "i");
-//   var newString3 = newString2.replaceAll("ai", "a");
-//   var newString4 = newString3.replaceAll("ober", "o");
-//   var newString5 = newString4.replaceAll("ufat", "u");
-  textOutput.innerHTML = newString;
+function btnDecrypt() {
+  var textToBeDecrypted = decrypt(textOutput.innerHTML);
+  textOutput.innerHTML = textToBeDecrypted;
+}
+
+function btnCopy() {
+  var copyText = textOutput.value;
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value);
+}
+
+function encrypt(text) {
+  hidePlaceholders();
+  showOutput();
+
+  let matrizCodigo = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
+  ];
+  text = text.toLowerCase();
+
+  for (var i = 0; i < matrizCodigo.length; i++) {
+    if (text.includes(matrizCodigo[i][0])) {
+      text = text.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+    }
+  }
+
+  return text;
+}
+
+function decrypt(text) {
+  let matrizCodigo = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
+  ];
+  text = text.toLowerCase();
+
+  for (var i = 0; i < matrizCodigo.length; i++) {
+    if (text.includes(matrizCodigo[i][1])) {
+      text = text.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+    }
+  }
+  return text;
 }

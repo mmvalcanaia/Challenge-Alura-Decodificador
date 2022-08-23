@@ -45,7 +45,7 @@ body {
   margin-left: 10px;
 }
 
-.output-text {
+.output-text, .toggle {
   background: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   font-size: 24px;
@@ -53,7 +53,11 @@ body {
   border-radius: 32px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .output-text h4 {
@@ -85,19 +89,30 @@ button {
   padding: 0;
 }
 
-.encrypt {
+.encrypt-btn {
   background: #0a3871;
   color: #ffffff;
 }
 
-.decrypt {
+.decrypt-btn {
   color: #0a3871;
   border: 1px solid #0a3871;
   background-color: #eff1fa;
 }
 
-.hide {
-  display: none;
+.copy-btn {
+  display: block;
+  border: none;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.copy-btn:hover {
+  background: #d4dbf9;
+}
+
+.copy-icon {
+  height: 30px;
 }
 
 @media (min-width: 765px) {
@@ -119,7 +134,7 @@ button {
     height: 90vh;
   }
 
-  .main-container{
+  .main-container {
     margin: 0 40px 0 100px;
   }
 
@@ -127,19 +142,16 @@ button {
     height: 900px;
   }
 
-  .buttons-container{
+  .buttons-container {
     justify-content: space-between;
   }
 
-  .decrypt{
-    background-color: #D8DFE8;
+  .decrypt-btn {
+    background-color: #d8dfe8;
   }
 
   .output-text {
     width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100%;
   }
 
