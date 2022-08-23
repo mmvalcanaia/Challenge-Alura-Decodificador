@@ -7,8 +7,14 @@ function hidePlaceholders() {
 }
 
 function showOutput() {
+  textOutput.style.display = "block";
+}
+
+function hideOutput(){
   textOutput.style.display = "none";
 }
+
+hideOutput();
 
 function btnEncrypt() {
   var textToBeEncrypted = encrypt(textInput.value);

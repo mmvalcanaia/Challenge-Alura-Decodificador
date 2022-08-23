@@ -150,9 +150,9 @@ button {
     background-color: #d8dfe8;
   }
 
-  .output-text {
+  .output-text, .toggle {
     width: 400px;
-    height: 100%;
+    height: 90%;
   }
 
   .searching-img {
