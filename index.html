@@ -12,32 +12,40 @@
       <div class="img-container">
         <img class="logo-img" src="./assets/Vector.svg" alt="" />
       </div>
-        <div class="main-container">
-          <textarea
-            name="text-input"
-            placeholder="Digite seu texto"
-            cols="30"
-            rows="10"
-            class="text-field input-text"
-          ></textarea>
-          <div class="info-container">
-            <img src="./assets/alert-icon.svg" alt="" />
-            <p>Apenas letras minúsculas e sem acento.</p>
-          </div>
-          <div class="buttons-container">
-            <button class="encrypt-btn" onclick="btnEncrypt()">
-              Criptografar
-            </button>
-            <button class="decrypt-btn" onclick="btnDecrypt()">
-              Descriptografar
-            </button>
-          </div>
+      <div class="main-container">
+        <textarea
+          name="text-input"
+          placeholder="Digite seu texto"
+          cols="30"
+          rows="10"
+          class="text-field input-text"
+        ></textarea>
+        <div class="info-container">
+          <img src="./assets/alert-icon.svg" alt="" />
+          <p>Apenas letras minúsculas e sem acento.</p>
         </div>
+        <div class="buttons-container">
+          <button class="encrypt-btn" onclick="btnEncrypt()">
+            Criptografar
+          </button>
+          <button class="decrypt-btn" onclick="btnDecrypt()">
+            Descriptografar
+          </button>
+        </div>
+      </div>
       <div class="output-text">
-        <textarea class="text-output-field" name="text-output-field" id="" cols="30" rows="10"></textarea>
-        <button class="copy-btn" onclick="btnCopy()">
-          <img src="./assets/copy-symbol.png" alt="" class="copy-icon" />
-        </button>
+        <textarea
+          class="text-output-field"
+          name="text-output-field"
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+        <div class="copy-btn-container">
+          <button class="copy-btn" onclick="btnCopy()">
+            <img src="./assets/copy-symbol.png" alt="" class="copy-icon" />
+          </button>
+        </div>
       </div>
       <div class="toggle">
         <img class="searching-img" src="./assets/girl-vector.svg" alt="" />
