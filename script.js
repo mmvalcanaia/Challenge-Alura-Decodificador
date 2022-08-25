@@ -1,5 +1,6 @@
 const textInput = document.querySelector(".input-text");
-const textOutput = document.querySelector(".output-text");
+const textOutput = document.querySelector(".text-output-field");
+const textOutputDiv = document.querySelector(".output-text");
 
 function hidePlaceholders() {
   const placeholders = document.querySelector(".toggle");
@@ -7,11 +8,11 @@ function hidePlaceholders() {
 }
 
 function showOutput() {
-  textOutput.style.display = "block";
+  textOutputDiv.style.display = "block";
 }
 
 function hideOutput(){
-  textOutput.style.display = "none";
+  textOutputDiv.style.display = "none";
 }
 
 hideOutput();
@@ -27,9 +28,7 @@ function btnDecrypt() {
 }
 
 function btnCopy() {
-  var copyText = textOutput.value;
-  copyText.select();
-  navigator.clipboard.writeText(copyText.value);
+  navigator.clipboard.writeText(textOutput.value);
 }
 
 function encrypt(text) {

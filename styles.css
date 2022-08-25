@@ -12,12 +12,20 @@ body {
   margin: 20px;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-img {
   height: 48px;
   margin-bottom: 50px;
 }
 
-.text-field {
+.text-field,
+.text-output-field {
   border: none;
   border-radius: 32px;
   margin-bottom: 20px;
@@ -45,7 +53,16 @@ body {
   margin-left: 10px;
 }
 
-.output-text, .toggle {
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.output-text,
+.toggle {
   background: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   font-size: 24px;
@@ -60,33 +77,38 @@ body {
   align-items: center;
 }
 
-.output-text h4 {
+.toggle h4 {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
   color: #343a40;
 }
 
-.output-text p {
+.toggle p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   color: #495057;
+}
+
+.text-output-field {
+  font-size: 24px;
+  color: #495057;
+  height: 70%;
 }
 
 .searching-img {
   display: none;
 }
 
-button {
+.decrypt-btn,
+.encrypt-btn {
   width: 330px;
   height: 60px;
   border-radius: 24px;
-  margin-bottom: 20px;
-  text-align: center;
+  margin: 10px;
   border: none;
   font-size: 16px;
-  padding: 0;
 }
 
 .encrypt-btn {
@@ -101,7 +123,6 @@ button {
 }
 
 .copy-btn {
-  display: block;
   border: none;
   width: 60px;
   border-radius: 50%;
@@ -122,7 +143,9 @@ button {
 
   .buttons-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 60px;
   }
 }
@@ -130,28 +153,27 @@ button {
 @media (min-width: 1200px) {
   main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 90vh;
   }
 
   .main-container {
-    margin: 0 40px 0 100px;
+    margin: 0 40px 0 80px;
   }
 
   .input-text {
-    height: 900px;
+    height: 800px;
+    width: 700px;
   }
 
   .buttons-container {
     justify-content: space-between;
+    margin: 0;
   }
 
-  .decrypt-btn {
-    background-color: #d8dfe8;
-  }
-
-  .output-text, .toggle {
-    width: 400px;
+  .output-text,
+  .toggle {
+    width: 350px;
     height: 90%;
   }
 
