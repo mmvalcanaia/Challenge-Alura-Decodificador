@@ -23,8 +23,10 @@ function btnEncrypt() {
 }
 
 function btnDecrypt() {
-  var textToBeDecrypted = decrypt(textOutput.innerHTML);
+  var textToBeDecrypted = decrypt(textInput.value);
+  console.log("passou no metodo")
   textOutput.innerHTML = textToBeDecrypted;
+  console.log("colocou a stringo no campo")
 }
 
 function btnCopy() {
@@ -54,6 +56,9 @@ function encrypt(text) {
 }
 
 function decrypt(text) {
+  hidePlaceholders();
+  showOutput();
+
   let matrizCodigo = [
     ["e", "enter"],
     ["i", "imes"],
