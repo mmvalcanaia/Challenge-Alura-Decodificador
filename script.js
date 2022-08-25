@@ -24,9 +24,7 @@ function btnEncrypt() {
 
 function btnDecrypt() {
   var textToBeDecrypted = decrypt(textInput.value);
-  console.log("passou no metodo")
   textOutput.innerHTML = textToBeDecrypted;
-  console.log("colocou a stringo no campo")
 }
 
 function btnCopy() {
